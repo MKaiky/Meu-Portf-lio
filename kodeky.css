@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
+}
+
+.kodeky-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.text-content h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.text-content h1 span {
+  color: #00aaff;
+}
+
+.text-content ul {
+  list-style: disc;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.text-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.text-content p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.blue {
+  color: #00aaff;
+}
+
+.white {
+  color: #fff;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 250px;
+  filter: drop-shadow(0 0 15px #00aaff);
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  color: #00aaff;
+  text-decoration: none;
+  border: 1px solid #00aaff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #00aaff;
+  color: #000;
+}

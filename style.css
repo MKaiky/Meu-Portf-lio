@@ -1,0 +1,347 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --primary: #007cff;
+  --background: #111;
+  --dark-bg: #000;
+  --card-bg: #1c1c1c;
+  --border: #333;
+  --text: #fff;
+  --transition: 0.3s ease;
+}
+
+/* BASE */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: var(--dark-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* LOGO */
+.logo-kodeky {
+  width: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: auto;
+}
+
+.logo-kodeky:hover {
+  transform: scale(1.1);
+}
+
+/* ===== INTRODUÇÃO ===== */
+.introducao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 8%;
+  flex-wrap: wrap;
+  min-height: 85vh;
+  background: linear-gradient(to bottom, #111 70%, #0b0b0b);
+  gap: 50px;
+}
+
+.introducao .texto-intro {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.introducao img {
+  width: 320px;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: var(--transition);
+}
+
+.introducao img:hover {
+  transform: scale(1.03);
+}
+
+.introducao h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.introducao h1 strong {
+  color: var(--primary);
+}
+
+.introducao h2 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ccc;
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+/* ===== PROJETOS, CERTIFICADOS, HABILIDADES ===== */
+main {
+  padding: 80px 60px;
+}
+
+.projetos-design,
+.projetos-programacao,
+.certificados-lista {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.projeto,
+.certificado,
+.habilidade {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.projeto:hover,
+.certificado:hover,
+.habilidade:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 124, 255, 0.3);
+}
+
+.projeto img,
+.certificado img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.habilidades-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* ===== TÍTULOS ===== */
+main h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: var(--dark-bg);
+  text-align: center;
+  padding: 25px;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .introducao {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 80px 5%;
+  }
+
+  .introducao img {
+    width: 250px;
+  }
+
+  .introducao h1 {
+    font-size: 26px;
+  }
+
+  .introducao h2 {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 40px 20px;
+  }
+}
+
+/* === CONTATOS === */
+/* === CONTATOS === */
+.contatos {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--background);
+  color: #1a1a1a;
+}
+
+.contatos h1 {
+  color: #0d47a1;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contatos p {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.contatos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contato-item {
+  background-color: var(--border);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contato-item h2 {
+  color: var(--text);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.contato-item a {
+  text-decoration: none;
+  color: #b0c4ee;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contato-item a:hover {
+  color: #1565c0;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+  .contatos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .contatos-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== KODEKY SECTION ===== */
+.kodeky-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 5%;
+  background-color: #000;
+  color: #fff;
+  text-align: justify;
+  gap: 60px;
+}
+
+.kodeky-texto {
+  max-width: 650px;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+}
+
+.kodeky-texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.kodeky-texto .azul {
+  color: #00aaff;
+}
+
+.kodeky-texto p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #e0e0e0;
+}
+
+.kodeky-logo {
+  width: 280px;
+  height: auto;
+  filter: drop-shadow(0 0 25px #00aaff);
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 1000px) {
+  .kodeky-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kodeky-texto {
+    max-width: 90%;
+  }
+
+  .kodeky-logo {
+    width: 200px;
+    margin-top: 20px;
+  }
+}
