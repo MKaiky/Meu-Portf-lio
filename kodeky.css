@@ -97,3 +97,15 @@ body {
   background-color: #00aaff;
   color: #000;
 }
+   a.voltar {
+            display: block;
+            text-align: center;
+            color: #007bff;
+            margin: 40px 0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a.voltar:hover {
+            color: #fff;
+        }

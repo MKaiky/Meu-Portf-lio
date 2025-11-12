@@ -169,6 +169,12 @@ main {
   margin-inline: auto;
 }
 
+.projetos h2 a,
+.projetos h2 a:visited {
+  color: #007cff;
+  text-decoration: none;
+}
+
 /* ===== TÍTULOS ===== */
 main h2 {
   text-align: center;
